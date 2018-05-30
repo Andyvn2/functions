@@ -1,0 +1,116 @@
+y = [19,2,54,-2,7,12,98,32,10,-3,6]
+y.sort()
+print y
+z = y[0:5]
+print z
+y.remove(-3)
+y.insert(5,z)
+print y[5:10]
+
+
+#####################################################################
+
+
+x = ["hello",2,54,-2,7,12,98,"world"]
+print "min list : ", x.pop()
+print "max list :", x.pop(0)
+
+
+
+
+#####################################################################
+
+Compare
+
+list_one = [1,2,5,6,2,1]
+list_two = [1,2,5,6,2]
+
+
+if cmp(list_two, list_one)==0:
+	print "the lists are the same"
+else:
+	print "the lists are unidentical"
+
+
+#####################################################################
+
+
+
+TUPLES
+
+
+dog = ("Canis Familiaris", "dog", "carnivore", 12)
+
+for data in dog:
+	print data
+
+dog = dog[:3] + ("man's best friend",) + dog[4:]
+#result is...
+#("Canis Familiaris", "Dog", "carnivore", "man's best friend", "domestic")
+
+
+len(sequence): returns length of given TUPLES
+
+max(sequence):returns largest value in sequence
+sum(sequence): return the sum of all values in sequence
+map(function, sequence): applies the function to every item in the sequence you pass in.
+sorted(sequence): returns a sorted sequence
+
+
+
+
+
+
+def get_circle_area(r):
+    #Return (circumference, area) of a circle of radius r
+    c = 2 * math.pi * r
+    a = math.pi * r * r
+    return (c, a)
+
+
+##########################################################################################################################################
+
+Lists
+
+
+cmp(list1, list2)
+
+len(list)
+
+list(seq): converts tuple into a list_two
+
+list.append(obj)
+Appends object obj to list
+
+
+list.count(obj)
+Returns count of how many times obj occurs in list
+
+
+list.extend(seq)
+Appends the contents of seq to list
+
+
+list.index(obj)
+Returns the lowest index in list that obj appears
+
+list.insert(index, obj)
+Inserts object obj into list at offset index
+
+
+list.pop(obj=list[-1])
+Removes and returns last object or obj from list
+
+list.remove(obj)
+Removes object obj from list
+
+list.sort([func])
+Sorts objects of list, use compare func if given
+
+
+
+
+
+##########################################################################################################################################
+
+x = [4, "Tom", 1, "Michael", 5, 7, "Jimmy Smith"]

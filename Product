@@ -1,0 +1,37 @@
+class product(object):
+	def __init__(self, price, item_name, weigth, brand, tax, returns):
+		self.price= price
+		self.item_name=item_name
+		self.weigth=weigth
+		self.brand=brand
+		self.status="for sale"
+		self.tax= tax
+		self.returns= False
+	def sell(self):
+		self.status="sold"
+		return self
+	def add_tax(self):
+		tax= self.price*self.tax/100
+		self.price= self.price+tax
+		return self
+	def return_item(self):
+		self.returns=True
+		if "defective":
+			self.status="defective"
+			self.price= 0
+		if "In Box":
+			self.status="For Sale"
+		if "Opened":
+			self.status="Used"
+			self.price= self.price- self.price*2
+			return self
+	def display_all(self):
+		if self.status=="sold":
+			print self.status
+		print "Price:",self.price, "Item Name:",self.item_name, "Weight:",self.weigth, "Brand:",self.brand, "Tax:",self.tax
+
+
+
+product1 = product( 100, "Milk", "15kg", "Tide", 8, "In Box")
+
+product1.add_tax().sell().return_item().display_all()
